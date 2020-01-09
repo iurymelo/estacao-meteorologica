@@ -14,10 +14,10 @@ Estação meteorológica com disponibilização dos dados em página web. Apesar
 
 # Funcionamento
 ## Arduino
-Arduino lê sensores -> envia os resultados para um broker escrito em python para tratar os dados -> envia para um servidor firebase.
+Arduino lê sensores -> broker requisita os dados e trata para envio -> envia ao banco de dados
 
 ## Webapp
-Webapp -> lê do servidor firebase -> mostra os resultados na web.
+Webapp -> lê do banco de dados -> mostra os resultados na web
 
 ## Passos:
 ### Protótipo em bancada
