@@ -1,4 +1,5 @@
 #include "leituras.h"
+#include "Mensageiro.h"
 
 // Struct para armazenar os resultados
 struct resultados {
@@ -8,6 +9,7 @@ struct resultados {
   int indiceUv = 9999;
 };
 
+
 resultados leituras;
 
 // Inicialização das structs
@@ -15,8 +17,11 @@ lm35 temperatura = criaSensorTemperatura(A0);
 dht11 umidade = criaSensorUmidade();
 guva indiceUv = criaSensorUv(A2);
 
+Mensageiro mensageiro;
+
 void setup() {  
   Serial.begin(9600);
+  mensageiro.inicia();
   
 }
 
